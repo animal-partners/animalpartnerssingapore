@@ -1,58 +1,78 @@
 :root {
-    --primary-green: #5b7c5d; /* Sage green vibe */
-    --earthy-bg: #fdfcf9;    /* Soft off-white */
-    --text-main: #333;
+    --primary-green: #4a6741;
+    --text-dark: #333;
+    --light-bg: #f9fbf8;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--earthy-bg);
-    color: var(--text-main);
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+}
+
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 10%;
-    background: white;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 20px;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
 .hero {
-    height: 60vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('your-image.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-bg.jpg') center/cover;
+    color: var(--white);
+    padding: 0 20px;
 }
 
-.hero h1 { font-size: 3rem; color: var(--primary-green); }
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
-.btn {
-    padding: 12px 24px;
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
     background: var(--primary-green);
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    border-radius: 30px; /* Rounded corners like Terrapy */
-    transition: 0.3s;
-}
-
-.grounding-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    padding: 50px 10%;
-}
-
-.grid-item {
-    padding: 20px;
-    border-bottom: 2px solid var(--primary-green); /* Minimalist accent */
+    border-radius: 5px;
 }
