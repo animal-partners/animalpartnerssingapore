@@ -1,21 +1,20 @@
-// Simple fade-in effect on scroll
-const observerOptions = { threshold: 0.1 };
+// smooth scrolling for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-}, observerOptions);
-
-document.querySelectorAll('.grid-item').forEach(item => {
-    item.style.opacity = "0";
-    item.style.transition = "opacity 1s ease-out";
-    observer.observe(item);
 });
 
-// CSS to support the script
-document.querySelectorAll('.grid-item').forEach(item => {
-    item.classList.add('fade-in');
+// basic scroll animation for header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.style.padding = '0.5rem 5%';
+    } else {
+        header.style.padding = '1rem 5%';
+    }
 });
