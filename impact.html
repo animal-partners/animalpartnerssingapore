@@ -42,86 +42,79 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Service Box Layout */
-    .services-list .service-box {
-      padding: 40px;
-      background: #fff;
-      border: 1px solid #eee;
-      height: 100%;
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  /* --- PAGE CONTENT ONLY --- */
+  /* Using .services-page ensures these ONLY affect the main content area */
+  
+  .services-page .services-list .service-box {
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #eee;
+    height: 100%;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .services-list .service-box:hover {
-      border-color: #ffc9a0;
-      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-    }
+  .services-page .services-list .service-box:hover {
+    border-color: #ffc9a0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  }
 
-    .services-list .service-box .icon {
-      width: 64px;
-      height: 64px;
-      background: #fff9f5;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      transition: 0.3s;
-      color: #924230;
-      font-size: 28px;
-    }
+  .services-page .services-list .service-box .icon {
+    width: 64px;
+    height: 64px;
+    background: #fff9f5;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    color: #924230;
+    font-size: 28px;
+  }
 
-    .services-list .service-box:hover .icon {
-      background: #924230;
-      color: #fff;
-    }
+  .services-page .services-list .service-box:hover .icon {
+    background: #924230;
+    color: #fff;
+  }
 
-    .services-list .service-box h3 {
-      color: #924230;
-      font-weight: 700;
-      margin-bottom: 15px;
-      font-size: 22px;
-    }
+  .services-page .services-list .service-box h3 {
+    color: #924230;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
 
-    /* Fixed Footer Clustering */
-    .footer .footer-links ul li {
-      padding: 8px 0;
-      display: flex;
-      align-items: center;
-    }
+  /* --- FOOTER SPECIFIC FIX --- */
+  /* This prevents the "clustering" you mentioned without breaking the header */
+  
+  #footer .footer-links ul li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+  }
 
-    .footer .footer-links ul li a {
-      white-space: nowrap;
-      line-height: 1.4;
-    }
+  #footer .footer-links ul li a {
+    line-height: 1.4;
+    white-space: normal; /* Allows long links to wrap properly */
+    display: inline-block;
+  }
 
-    @media (max-width: 1199px) {
-      .footer .footer-links ul li a {
-        white-space: normal;
-      }
-    }
-
-    /* Team Placeholder Styling */
-    .img-container {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      margin-bottom: 15px;
-      background-color: #f8f8f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #eee;
-    }
-
-    .img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
+  /* Team Placeholder Styling */
+  .services-page .img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+  }
+</style>
 </head>
 
 <body class="services-page">
