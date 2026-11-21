@@ -24,9 +24,94 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Gallery hover captions; no lightbox and no separate CSS file -->
+  <style>
+    #gallery .aps-gallery-tile {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #e8ded8;
+      isolation: isolate;
+    }
+
+    #gallery .aps-gallery-tile img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    #gallery .aps-gallery-tile figcaption {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 6px;
+      padding: 20px;
+      background: linear-gradient(180deg, transparent 10%, rgba(46, 22, 16, .92) 100%);
+      color: #fff;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .25s ease, transform .25s ease;
+      pointer-events: none;
+    }
+
+    #gallery .aps-gallery-tile figcaption strong {
+      display: block;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    #gallery .aps-gallery-tile figcaption span {
+      display: block;
+      color: #fff;
+      font-size: .85rem;
+      line-height: 1.5;
+    }
+
+    #gallery .aps-gallery-tile:hover figcaption,
+    #gallery .aps-gallery-tile:focus-visible figcaption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #gallery .aps-gallery-tile:hover img,
+    #gallery .aps-gallery-tile:focus-visible img {
+      transform: scale(1.045);
+    }
+
+    #gallery .aps-gallery-tile:focus-visible {
+      outline: 3px solid #924230;
+      outline-offset: 3px;
+    }
+
+    @media (hover: none) {
+      #gallery .aps-gallery-tile figcaption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #gallery .aps-gallery-tile img,
+      #gallery .aps-gallery-tile figcaption {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -77,165 +162,230 @@
 
   <main class="main">
 
-    <!-- Gallery Introduction -->
-    <section class="section" style="background-color: #ffffff; padding: 80px 0 40px;">
-      <div class="container section-title" data-aos="fade-up">
-        <h2 style="color: #924230;">Our Gallery</h2>
-        <p style="max-width: 760px; margin: 20px auto 0; color: #555; line-height: 1.8; font-size: 18px;">
-          From workplaces and schools to healthcare and community settings,
-          take a closer look at our sessions and the connections made along the way.
-        </p>
+    <!-- Page title and breadcrumb, matching the layout on other service pages -->
+    <div class="page-title light-background" style="background-color: #f8f5f4; padding: 30px 0;">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0" style="color: #3c000c;">Our Gallery</h1>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current" aria-current="page">Our Gallery</li>
+          </ol>
+        </nav>
       </div>
-    </section>
+    </div>
 
-    <!-- Gallery Photos: 4 columns on desktop, 3 on tablet, 2 on mobile -->
+    <!-- Gallery: hover to see information. Photos do not open on click. -->
     <section id="gallery" class="section" style="background-color: #f3f4ef; padding: 60px 0 90px;">
       <div class="container">
         <div class="row g-3 g-lg-4">
-          <!-- Photo 01 -->
+          <!-- Photo 01: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery1.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 1">
-              <img src="assets/img/gallery/gallery1.webp" alt="Animal Partners Singapore session photo 1"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Animal-Assisted Activities">
+              <img src="assets/img/gallery/gallery1.webp"
+                   alt="Animal-Assisted Activities"
+                   loading="lazy">
+              <figcaption>
+                <strong>Animal-Assisted Activities</strong>
+                <span>Sharing moments of connection through guided interactions.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 02 -->
+          <!-- Photo 02: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery2.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 2">
-              <img src="assets/img/gallery/gallery2.webp" alt="Animal Partners Singapore session photo 2"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Workplace Well-being">
+              <img src="assets/img/gallery/gallery2.webp"
+                   alt="Workplace Well-being"
+                   loading="lazy">
+              <figcaption>
+                <strong>Workplace Well-being</strong>
+                <span>Time to pause, reset and connect with our animal partners.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 03 -->
+          <!-- Photo 03: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery3.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 3">
-              <img src="assets/img/gallery/gallery3.webp" alt="Animal Partners Singapore session photo 3"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Community Connections">
+              <img src="assets/img/gallery/gallery3.webp"
+                   alt="Community Connections"
+                   loading="lazy">
+              <figcaption>
+                <strong>Community Connections</strong>
+                <span>Bringing people together through shared experiences.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 04 -->
+          <!-- Photo 04: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery4.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 4">
-              <img src="assets/img/gallery/gallery4.webp" alt="Animal Partners Singapore session photo 4"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Learning About Animals">
+              <img src="assets/img/gallery/gallery4.webp"
+                   alt="Learning About Animals"
+                   loading="lazy">
+              <figcaption>
+                <strong>Learning About Animals</strong>
+                <span>Getting to know different animals and their needs.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 05 -->
+          <!-- Photo 05: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery5.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 5">
-              <img src="assets/img/gallery/gallery5.webp" alt="Animal Partners Singapore session photo 5"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Mindfulness with Animals">
+              <img src="assets/img/gallery/gallery5.webp"
+                   alt="Mindfulness with Animals"
+                   loading="lazy">
+              <figcaption>
+                <strong>Mindfulness with Animals</strong>
+                <span>Encouraging calm through observation and interaction.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 06 -->
+          <!-- Photo 06: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery6.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 6">
-              <img src="assets/img/gallery/gallery6.webp" alt="Animal Partners Singapore session photo 6"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Psychosocial Education">
+              <img src="assets/img/gallery/gallery6.webp"
+                   alt="Psychosocial Education"
+                   loading="lazy">
+              <figcaption>
+                <strong>Psychosocial Education</strong>
+                <span>Learning and reflection through animal-assisted sessions.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 07 -->
+          <!-- Photo 07: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery7.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 7">
-              <img src="assets/img/gallery/gallery7.webp" alt="Animal Partners Singapore session photo 7"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Guided Interactions">
+              <img src="assets/img/gallery/gallery7.webp"
+                   alt="Guided Interactions"
+                   loading="lazy">
+              <figcaption>
+                <strong>Guided Interactions</strong>
+                <span>Respectful, supported interactions at each person&#x27;s pace.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 08 -->
+          <!-- Photo 08: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery8.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 8">
-              <img src="assets/img/gallery/gallery8.webp" alt="Animal Partners Singapore session photo 8"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Senior Engagement">
+              <img src="assets/img/gallery/gallery8.webp"
+                   alt="Senior Engagement"
+                   loading="lazy">
+              <figcaption>
+                <strong>Senior Engagement</strong>
+                <span>Creating opportunities for social connection and participation.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 09 -->
+          <!-- Photo 09: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery9.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 9">
-              <img src="assets/img/gallery/gallery9.webp" alt="Animal Partners Singapore session photo 9"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Youth Programmes">
+              <img src="assets/img/gallery/gallery9.webp"
+                   alt="Youth Programmes"
+                   loading="lazy">
+              <figcaption>
+                <strong>Youth Programmes</strong>
+                <span>Building understanding through engaging group activities.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 10 -->
+          <!-- Photo 10: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery10.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 10">
-              <img src="assets/img/gallery/gallery10.webp" alt="Animal Partners Singapore session photo 10"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Animal Welfare">
+              <img src="assets/img/gallery/gallery10.webp"
+                   alt="Animal Welfare"
+                   loading="lazy">
+              <figcaption>
+                <strong>Animal Welfare</strong>
+                <span>Supporting safe and positive experiences for every animal.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 11 -->
+          <!-- Photo 11: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery11.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 11">
-              <img src="assets/img/gallery/gallery11.webp" alt="Animal Partners Singapore session photo 11"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Learning Together">
+              <img src="assets/img/gallery/gallery11.webp"
+                   alt="Learning Together"
+                   loading="lazy">
+              <figcaption>
+                <strong>Learning Together</strong>
+                <span>Exploring new ideas through hands-on activities.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 12 -->
+          <!-- Photo 12: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery12.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 12">
-              <img src="assets/img/gallery/gallery12.webp" alt="Animal Partners Singapore session photo 12"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Feline Sessions">
+              <img src="assets/img/gallery/gallery12.webp"
+                   alt="Feline Sessions"
+                   loading="lazy">
+              <figcaption>
+                <strong>Feline Sessions</strong>
+                <span>Gentle observation and interactions with our cat partners.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 13 -->
+          <!-- Photo 13: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery13.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 13">
-              <img src="assets/img/gallery/gallery13.webp" alt="Animal Partners Singapore session photo 13"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Small Animal Sessions">
+              <img src="assets/img/gallery/gallery13.webp"
+                   alt="Small Animal Sessions"
+                   loading="lazy">
+              <figcaption>
+                <strong>Small Animal Sessions</strong>
+                <span>Learning about care, comfort and animal behaviour.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 14 -->
+          <!-- Photo 14: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery14.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 14">
-              <img src="assets/img/gallery/gallery14.webp" alt="Animal Partners Singapore session photo 14"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Human-Animal Connection">
+              <img src="assets/img/gallery/gallery14.webp"
+                   alt="Human-Animal Connection"
+                   loading="lazy">
+              <figcaption>
+                <strong>Human-Animal Connection</strong>
+                <span>Making space for meaningful moments together.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 15 -->
+          <!-- Photo 15: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery15.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 15">
-              <img src="assets/img/gallery/gallery15.webp" alt="Animal Partners Singapore session photo 15"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Interactive Workshops">
+              <img src="assets/img/gallery/gallery15.webp"
+                   alt="Interactive Workshops"
+                   loading="lazy">
+              <figcaption>
+                <strong>Interactive Workshops</strong>
+                <span>Activities designed around people and animal welfare.</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <!-- Photo 16 -->
+          <!-- Photo 16: edit the caption text to match your photo -->
           <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <a href="assets/img/gallery/gallery16.webp" class="glightbox d-block ratio ratio-1x1 overflow-hidden rounded-3"
-               data-gallery="animal-partners-gallery" aria-label="Open session photo 16">
-              <img src="assets/img/gallery/gallery16.webp" alt="Animal Partners Singapore session photo 16"
-                   loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-            </a>
+            <figure class="aps-gallery-tile" tabindex="0" aria-label="Doing Good Together">
+              <img src="assets/img/gallery/gallery16.webp"
+                   alt="Doing Good Together"
+                   loading="lazy">
+              <figcaption>
+                <strong>Doing Good Together</strong>
+                <span>A look at the people and animals behind our programmes.</span>
+              </figcaption>
+            </figure>
           </div>
-
         </div>
       </div>
     </section>
@@ -337,19 +487,10 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Open images in a full-size gallery -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (typeof GLightbox === 'function') {
-        GLightbox({ selector: '.glightbox', loop: true, touchNavigation: true });
-      }
-    });
-  </script>
 
 </body>
 
