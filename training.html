@@ -6,30 +6,28 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Animal Partners Singapore: Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy </title>
+
   <meta property="og:image" content="favicon-32x32.png" /> 
   <meta name="description" content="Animal Partners Singapore: Singapore animal-assisted interventions (AAIs) for children, youths, and adults from...Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy, pet therapy, dog therapy, cat therapy, animal petting,">
   <meta property="og:title" content="Animal Partners Singapore: Singapore Equiping Workshops for children, youths and adults.. Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy"/> 
   <meta name="og:description" content="Animal Partners Singapore: Singapore tailors animal-assisted interventions (AAIs) for children, youths, and adults from...Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy"/> 
   <meta property="og:image" content="Animal Partners Singapore: Singapore Equiping Workshops for children, youths and adults. Animal-Assisted Interactions, Animal-Assisted Therapy, Animal-Assisted Education, Animal Assisted Interactions, Animal Assisted Therapy, Animal Assisted Education, Animal-Assisted Interactions Singapore, Animal-Assisted Therapy Singapore, Animal-Assisted Education Singapore, Singapore animal therapy" />
 
-
-
   <!-- Favicons -->
-
   <link rel="icon" type="image/png" sizes="16x16" href="assets/main/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/main/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="assets/main/favicon-48x48.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/main/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#ffffff">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/mstile-150x150.png">
-<link rel="shortcut icon" href="assets/main/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/main/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/main/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/main/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/mstile-150x150.png">
+  <link rel="shortcut icon" href="assets/main/favicon.ico">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +39,51 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Image Gallery Fix -->
+  <style>
+
+    /* Consistent image slider dimensions */
+    #service-details .service-details-slider {
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      height: auto !important;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    /* Keep all slides at the same height */
+    #service-details .service-details-slider .swiper-wrapper {
+      height: 100%;
+      align-items: stretch !important;
+    }
+
+    #service-details .service-details-slider .swiper-slide {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Automatically resize images without distortion */
+    #service-details .service-details-slider .swiper-slide img {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: none !important;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0 !important;
+    }
+
+    /* Mobile responsive image gallery */
+    @media (max-width: 767px) {
+      #service-details .service-details-slider {
+        aspect-ratio: 4 / 3;
+        border-radius: 15px;
+      }
+    }
+
+  </style>
+
   <!-- =======================================================
   * Template Name: Scout
   * Template URL: https://bootstrapmade.com/scout-bootstrap-multipurpose-template/
@@ -48,60 +91,95 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top"  style="background-color: #ffc9a0 !important;">
+  <header id="header" class="header d-flex align-items-center sticky-top" style="background-color: #ffc9a0 !important;">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-      <img src="assets/img/logo.png" alt="Animal Partners Singapore" style="max-height: 60px; height: auto;"> 
+        <img src="assets/img/logo.png" alt="Animal Partners Singapore" style="max-height: 60px; height: auto;">
       </a>
-      
+
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="aboutus.html" style="color: #924230;"><span>About</span></a></li>
-            <li class="dropdown" style="color: #924230;"><a><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+          <li>
+            <a href="aboutus.html" style="color: #924230;">
+              <span>About</span>
+            </a>
+          </li>
+
+          <li class="dropdown" style="color: #924230;">
+            <a>
+              <span>Services</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+
             <ul>
-              <li class="dropdown"><a href="aaa.html"><span>Animal-Assisted Activities</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+              <li class="dropdown">
+                <a href="aaa.html">
+                  <span>Animal-Assisted Activities</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+
                 <ul>
                   <li><a href="cp.html">Curated Programmes</a></li>
                   <li><a href="pe.html">Psychosocial Education</a></li>
                   <li><a href="learn.html">Learning About Animals!</a></li>
                   <li><a href="play.html">Play! And Learn</a></li>
-
                 </ul>
               </li>
-                <li class="dropdown"><a href="impact.html"><span>Consultancy</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+              <li class="dropdown">
+                <a href="impact.html">
+                  <span>Consultancy</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+
                 <ul>
                   <li><a href="setup.html">Animal Space Setup</a></li>
-                    <li><a href="evaluation.html">Animal Team Evaluation</a></li>
+                  <li><a href="evaluation.html">Animal Team Evaluation</a></li>
                   <li><a href="training.html">Equipping and Training</a></li>
                 </ul>
               </li>
-               <li class="dropdown"><a href="ro.html"><span>Research and Other Support</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+              <li class="dropdown">
+                <a href="ro.html">
+                  <span>Research and Other Support</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+
                 <ul>
                   <li><a href="projects.html">Some Projects</a></li>
                   <li><a href="research.html">Research and Collaborations</a></li>
                 </ul>
               </li>
+
             </ul>
           </li>
+
         </ul>
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-<a class="btn-getstarted" href="mailto:hello@animalpartners.sg">Contact Us</a>
+      <a class="btn-getstarted" href="mailto:hello@animalpartners.sg">Contact Us</a>
+
     </div>
   </header>
-
 
   <main class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
+
         <h1 class="mb-2 mb-lg-0">Equipping & Training</h1>
+
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -109,51 +187,91 @@
             <li class="current">Training</li>
           </ol>
         </nav>
+
       </div>
     </div>
 
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
+
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+
         <div class="row gy-5">
 
           <!-- LEFT SIDEBAR -->
           <div class="col-lg-5">
+
             <div class="service-sidebar">
-              
+
               <div class="service-overview" data-aos="fade-up" data-aos-delay="100">
+
                 <div class="overview-header">
                   <h3>Empowering Facilitators</h3>
                 </div>
+
                 <div class="overview-content">
-                  <p>Animal-Assisted Services go beyond just animal handling- and we see the need to develop empathy, observation skills, and ethical mindset required to lead impactful sessions.</p>
+
+                  <p>
+                    Animal-Assisted Services go beyond just animal handling- and we see the need to develop empathy, observation skills, and ethical mindset required to lead impactful sessions.
+                  </p>
+
                   <div class="cta-button pt-3">
-                    <a href="mailto:hello@animalpartners.sg" class="btn-get-started">Book a Workshop</a>
+                    <a href="mailto:hello@animalpartners.sg" class="btn-get-started">
+                      Book a Workshop
+                    </a>
                   </div>
+
                 </div>
+
               </div>
 
               <div class="key-benefits mt-4" data-aos="fade-up" data-aos-delay="200">
+
                 <h4>Key Training Focus Areas</h4>
+
                 <ul>
-                  <li><i class="bi bi-person-check-fill"></i> Facilitation & Intervention Skills</li>
-                  <li><i class="bi bi-person-check-fill"></i> Understanding Animal Welfare</li>
-                  <li><i class="bi bi-person-check-fill"></i> Ethical Guidelines & Codes of Conduct</li>
-                  <li><i class="bi bi-person-check-fill"></i> Reading Animal Body Language</li>
-                  <li><i class="bi bi-person-check-fill"></i> Managing Interaction Dynamics</li>
+                  <li>
+                    <i class="bi bi-person-check-fill"></i>
+                    Facilitation & Intervention Skills
+                  </li>
+
+                  <li>
+                    <i class="bi bi-person-check-fill"></i>
+                    Understanding Animal Welfare
+                  </li>
+
+                  <li>
+                    <i class="bi bi-person-check-fill"></i>
+                    Ethical Guidelines & Codes of Conduct
+                  </li>
+
+                  <li>
+                    <i class="bi bi-person-check-fill"></i>
+                    Reading Animal Body Language
+                  </li>
+
+                  <li>
+                    <i class="bi bi-person-check-fill"></i>
+                    Managing Interaction Dynamics
+                  </li>
                 </ul>
+
               </div>
 
             </div>
+
           </div>
 
           <!-- RIGHT CONTENT -->
           <div class="col-lg-7">
+
             <div class="service-content">
 
               <!-- Image Gallery / Slider -->
               <div class="image-gallery mb-4" data-aos="zoom-in" data-aos-delay="100">
+
                 <div class="service-details-slider swiper init-swiper">
+
                   <script type="application/json" class="swiper-config">
                     {
                       "loop": true,
@@ -162,7 +280,11 @@
                         "delay": 5000
                       },
                       "slidesPerView": 1,
+                      "autoHeight": false,
                       "effect": "fade",
+                      "fadeEffect": {
+                        "crossFade": true
+                      },
                       "navigation": {
                         "nextEl": ".swiper-button-next",
                         "prevEl": ".swiper-button-prev"
@@ -174,147 +296,251 @@
                       }
                     }
                   </script>
-                  <div class="swiper-wrapper align-items-center">
+
+                  <div class="swiper-wrapper">
+
+                    <!-- Image 1 -->
                     <div class="swiper-slide">
-                      <img src="assets/img/training.webp" alt="" class="img-fluid rounded" loading="lazy">
+                      <img
+                        src="assets/img/training.webp"
+                        alt="Animal Partners Singapore Training"
+                        loading="lazy">
                     </div>
+
+                    <!-- Image 2 -->
                     <div class="swiper-slide">
-                      <img src="assets/img/training2.webp" alt="" class="img-fluid rounded" loading="lazy">
+                      <img
+                        src="assets/img/training2.webp"
+                        alt="Animal-Assisted Services Workshop"
+                        loading="lazy">
                     </div>
+
+                    <!-- Image 3 -->
                     <div class="swiper-slide">
-                      <img src="assets/img/training3.webp" alt="" class="img-fluid rounded" loading="lazy">
+                      <img
+                        src="assets/img/training3.webp"
+                        alt="Animal-Assisted Services Practical Training"
+                        loading="lazy">
                     </div>
+
                   </div>
+
+                  <!-- Slider controls -->
                   <div class="swiper-pagination"></div>
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
+
                 </div>
+
               </div>
 
-              
+              <!-- Professionalizing Practice -->
               <div class="details-content" data-aos="fade-up" data-aos-delay="100">
+
                 <div class="section-header">
                   <h3>Professionalizing Practice</h3>
                   <div class="divider"></div>
                 </div>
+
                 <p>
                   At Animal Partners Singapore, we believe that the success of any animal-assisted programme rests on the knowledge and competence of the humans involved. We provide specialized training modules designed to equip educators, healthcare workers, and volunteers with the theoretical foundations and practical skills needed for animal-assisted services.
                 </p>
+
                 <p>
                   Our training programs are deeply rooted in experiential learning and inquiry-based education. We don't just tell you what to do, we provide opportunities for reflection and hands-on practice, ensuring that facilitators are confident in managing the unique complexities of human-animal interactions.
                 </p>
+
               </div>
 
+              <!-- Training Modules -->
               <div class="details-content mt-5" data-aos="fade-up" data-aos-delay="200">
+
                 <div class="section-header">
                   <h3>Customizable Training Modules</h3>
                   <div class="divider"></div>
                 </div>
+
                 <p>
                   We offer workshops and seminars tailored to your specific goals:
                 </p>
-                
+
                 <div class="row mt-4 g-4">
+
                   <div class="col-md-6">
+
                     <div class="feature-card h-100">
+
                       <h4>The Handler's Mindset</h4>
-                      <p>Focusing on the psychological aspects of facilitation, building rapport with participants, and maintaining ethical boundaries.</p>
+
+                      <p>
+                        Focusing on the psychological aspects of facilitation, building rapport with participants, and maintaining ethical boundaries.
+                      </p>
+
                     </div>
+
                   </div>
+
                   <div class="col-md-6">
+
                     <div class="feature-card h-100">
+
                       <h4>Looking out for our co-teachers</h4>
-                      <p>Training on how to advocate for the animal partner, recognize subtle stress signals, and ensure a mutualistic experience.</p>
+
+                      <p>
+                        Training on how to advocate for the animal partner, recognize subtle stress signals, and ensure a mutualistic experience.
+                      </p>
+
                     </div>
+
                   </div>
+
                 </div>
-                
+
                 <p class="mt-4">
                   Whether you are looking for a one-day introductory workshop or a comprehensive certification/support programme, we can develop a training roadmap that fits your organization's needs and level of experience.
                 </p>
+
               </div>
 
             </div>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background"  style="background-color: #7f402e !important;">
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background" style="background-color: #7f402e !important;">
 
     <div class="container footer-top">
+
       <div class="row gy-4">
+
         <div class="col-lg-4 col-md-6 footer-about">
+
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">Animal Partners Singapore</span>
           </a>
+
           <div class="footer-contact pt-3">
-         
-            <p class="mt-3"><strong>Phone:</strong> <span>+65 8772 5464 </span></p>
-            <p><strong>Email:</strong> <span>hello@animalpartners.sg</span></p>
+
+            <p class="mt-3">
+              <strong>Phone:</strong>
+              <span>+65 8772 5464</span>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <span>hello@animalpartners.sg</span>
+            </p>
+
           </div>
+
           <div class="social-links d-flex mt-4">
-          <!--  <a href="https://www.instagram.com/ap.sg"><i class="bi bi-instagram"></i></a> -->
-            <a href="https://www.linkedin.com/company/animalpartners/"><i class="bi bi-linkedin"></i></a>
+
+            <!--
+            <a href="https://www.instagram.com/ap.sg">
+              <i class="bi bi-instagram"></i>
+            </a>
+            -->
+
+            <a href="https://www.linkedin.com/company/animalpartners/">
+              <i class="bi bi-linkedin"></i>
+            </a>
+
           </div>
+
         </div>
 
+        <!-- Useful Links -->
         <div class="col-lg-3 col-md-3 footer-links">
+
           <h4>Useful Links</h4>
+
           <ul>
-             <li><a href="aboutus.html">About Us</a></li>
-              <li><a href="pe.html">Psychosocial Education</a></li>
-               <li><a href="training.html">Equipping and Training</a></li>
-              <li><a href="projects.html">Some Projects</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="pe.html">Psychosocial Education</a></li>
+            <li><a href="training.html">Equipping and Training</a></li>
+            <li><a href="projects.html">Some Projects</a></li>
             <li><a href="research.html">Research and Collaborations</a></li>
-           
           </ul>
+
         </div>
 
+        <!-- Our Services -->
         <div class="col-lg-3 col-md-3 footer-links">
+
           <h4>Our Services</h4>
+
           <ul>
-        
-              <li class="dropdown"><a href="aaa.html"><span>Animal-Assisted Activities</span></a> </li>
 
-                <li class="dropdown"><a href="impact.html"><span>Consultancy</span> </a> </li>
-                          
-               <li class="dropdown"><a href="ro.html"><span>Research and Other Support</span></a>  </li>    
-          </ul>   </div>
+            <li class="dropdown">
+              <a href="aaa.html">
+                <span>Animal-Assisted Activities</span>
+              </a>
+            </li>
 
+            <li class="dropdown">
+              <a href="impact.html">
+                <span>Consultancy</span>
+              </a>
+            </li>
+
+            <li class="dropdown">
+              <a href="ro.html">
+                <span>Research and Other Support</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- Our Concepts -->
         <div class="col-lg-2 col-md-3 footer-links">
+
           <h4>Our Concepts</h4>
+
           <ul>
             <li><a href="https://chacsg.com/">CHAC</a></li>
-           <li><a href="https://caaisg.html">CAAI</a></li>
-
-            <li><a href="pi.html">Project Integrate </a></li>
+            <li><a href="https://caaisg.html">CAAI</a></li>
+            <li><a href="pi.html">Project Integrate</a></li>
             <li><a href="silverconnect.html">SilverConnect</a></li>
             <li><a href="https://thegoodpeople.sg/tactiletails.html">Tactile Tails</a></li>
             <li><a href="resili-hens.html">Resili-Hens</a></li>
-
           </ul>
+
         </div>
 
-       
-
       </div>
+
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p> <span>Copyright</span> © <strong class="px-1 sitename">Animal Partners Singapore. </strong> <span>All Rights Reserved.</span></p>
+
+      <p>
+        <span>Copyright</span> ©
+        <strong class="px-1 sitename">Animal Partners Singapore.</strong>
+        <span>All Rights Reserved.</span>
+      </p>
+
       <div class="credits">
         <a>Doing Good Together</a>
       </div>
+
     </div>
 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
